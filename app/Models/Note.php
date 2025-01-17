@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 class Note extends Model
 {
     use HasUuids;
+
+    protected $guarded = [
+        'id'
+    ];
 }
