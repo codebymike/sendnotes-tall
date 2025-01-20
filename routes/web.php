@@ -13,7 +13,7 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 Route::view('notes', 'notes')
-    ->middleware(['auth', 'verified'])
+    ->middleware(['auth'])
     ->name('notes');
 
 require __DIR__.'/auth.php';
