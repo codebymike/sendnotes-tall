@@ -13,6 +13,13 @@ new class extends Component {
 
 <div>
     @foreach( $notes as $note )
-    {{ $note->title }}
+        <x-card wire:key='{{ $note->id }}'>
+            <div class="flex justify-between">
+                <a href=""
+                    class="text-xl font-bold hover:underline hover:text-blue-500">
+                    {{ $note->title }}
+                </a>
+            </div>
+        </x-card>
     @endforeach
 </div>
