@@ -6,11 +6,13 @@ new class extends Component {
     public function with(): array
     {
         return [
-            'title' => "Show Notes",
+            "notes" => Auth::user()->notes()->orderBy("sent_date", "asc")->get(),
         ];
     }
 }; ?>
 
 <div>
-    {{ $title }}
+    @foreach( $notes as $note )
+    {{ $note->title }}
+    @endforeach
 </div>
