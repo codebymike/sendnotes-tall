@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('body');
             $table->date('send_date');
+            $table->string('recipient');
             $table->boolean('is_published')->default(false);
             $table->integer('heart_count')->default(0);
             $table->timestamps();

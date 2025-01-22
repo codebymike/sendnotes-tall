@@ -21,6 +21,7 @@ class NoteFactory extends Factory
             "title" => $this->faker->sentence,
             "body" => $this->faker->paragraph,
             "send_date" => $this->faker->date,
+            "recipient" => $this->faker->name,
         ];
     }
 }
