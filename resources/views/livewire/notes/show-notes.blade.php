@@ -12,6 +12,7 @@ new class extends Component {
 }; ?>
 
 <div class="space-y-2">
+    <div class="grid grid-cols-3 gap-4">
     @foreach( $notes as $note )
         <x-card wire:key='{{ $note->id }}'>
             <div class="flex justify-between">
@@ -25,6 +26,16 @@ new class extends Component {
                     {{ \Carbon\Carbon::parse($note->send_date)->format('M-d-Y') }}
                 </div>
             </div>
+            <div class="flex items-end justify-between mt-4 space-x-1">
+                <p class="text-xs">Recipient: <span class="font-semibold">{{ $note->recipient }}</span></p>
+                <div>
+                    <x-mini-button rounded outline icon="eye" href="#">
+                    </x-button.circle>
+                    <x-mini-button rounded outline icon="trash" href="#">
+                    </x-button.circle>
+                </div>
+            </div>
         </x-card>
     @endforeach
+    </div>
 </div>
