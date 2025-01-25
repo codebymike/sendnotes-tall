@@ -20,7 +20,7 @@ class NoteFactory extends Factory
             "user_id" => 1,
             "title" => $this->faker->sentence,
             "body" => $this->faker->paragraph,
-            "send_date" => $this->faker->date,
+            "send_date" => $this->faker->dateTimeBetween("now", "+1 year"),
             "recipient" => $this->faker->email,
             "heart_count" => $this->faker->numberBetween(0, 100),
         ];
