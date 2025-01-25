@@ -22,6 +22,7 @@ class NoteFactory extends Factory
             "body" => $this->faker->paragraph,
             "send_date" => $this->faker->date,
             "recipient" => $this->faker->email,
+            "heart_count" => $this->faker->numberBetween(0, 100),
         ];
     }
 }
