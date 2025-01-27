@@ -54,8 +54,7 @@ new class extends Component {
                     <div class="flex items-end justify-between mt-4 space-x-1">
                         <p class="text-xs">Recipient: <span class="font-semibold">{{ $note->recipient }}</span></p>
                         <div>
-                            <x-mini-button rounded outline icon="eye" href="#">
-                            </x-button.circle>
+                            <x-mini-button rounded outline icon="eye" href="{{ route('notes.view', $note) }}"></x-button.circle>
                             <x-mini-button rounded outline icon="trash" wire:click="delete('{{ $note->id }}')"></x-button.circle>
                         </div>
                     </div>
