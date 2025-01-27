@@ -2,6 +2,7 @@
 
 use Livewire\Volt\Volt;
 use Illuminate\Support\Facades\Route;
+use App\Models\Note;
 
 Route::view('/', 'welcome');
 
