@@ -23,6 +23,7 @@ class NoteFactory extends Factory
             "send_date" => $this->faker->dateTimeBetween("now", "+1 year"),
             "recipient" => $this->faker->email,
             "heart_count" => $this->faker->numberBetween(0, 100),
+            "is_published" => true,
         ];
     }
 }
