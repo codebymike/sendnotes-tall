@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Jobs\SendEmail;
 use Illuminate\Console\Command;
 
 class SendScheduledNotes extends Command
@@ -35,7 +36,7 @@ class SendScheduledNotes extends Command
         $this->info("Sending {$noteCount} scheduled notes.");
 
         foreach ($notes as $note) {
-            // SendEmail::dispatch($note);
+            SendEmail::dispatch($note);
         }
     }
 }
